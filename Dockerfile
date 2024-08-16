@@ -40,7 +40,9 @@ RUN \
 	sed -i '/^cryptography/d' requirements.txt && \
 	sed -i '/^cffi/d' requirements.txt && \    
 	/venv/bin/python3 -m pip install -r requirements.txt -U && \
-	/venv/bin/python3 SABnzbd.py -b0 -l2
+ 	echo "Done building"
+  
+CMD /venv/bin/python3 SABnzbd.py -b0 -l2 --server 0.0.0.0:8080
 
       
 
