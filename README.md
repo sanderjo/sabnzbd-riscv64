@@ -38,7 +38,7 @@ SABnzbd should show these lines at startup.
 
 # rvv
 
-Docker the build, if your RISCV64 supports RVV, you should see the list of RVV commands in the par2 binary:
+During the build, if your RISCV64 supports RVV, you should see the list of RVV commands in the par2 binary:
 
 ```
 par2cmdline-turbo version 1.1.1
