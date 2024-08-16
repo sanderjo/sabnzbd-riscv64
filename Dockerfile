@@ -42,7 +42,9 @@ RUN \
 	/venv/bin/python3 -m pip install -r requirements.txt -U && \
  	echo "Done building"
   
-CMD /venv/bin/python3 SABnzbd.py -b0 -l2 --server 0.0.0.0:8080
+
+CMD cd /app/sabnzbd && /venv/bin/python3 SABnzbd.py -b0 -l2 --server 0.0.0.0:8080
+
 
       
 
