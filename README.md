@@ -8,6 +8,10 @@ Specials:
 * unrar: remove "-march=native" so that it compiles
 * sabnzbd: use python modules cryptography and cffi from alpine (not from pip, as that needs rust and a lot of compiling)
 
+# Prepare
+
+Running on your RISCV64: Bianbu, with docker (docker.io) installed
+
 # build
 
 On your RISCV64 board, execute this:
@@ -16,9 +20,23 @@ On your RISCV64 board, execute this:
 docker build -t="sanderjo/sabnzbd-riscv64" github.com/sanderjo/sabnzbd-riscv64.git#main
 ```
 
-Building will take 10-15 minutes (on a Banana Pi BPI-F3, with SpacemiT K1 8 core RISC-V chip)
+
+Building will take 15 minutes (on a Banana Pi BPI-F3, with SpacemiT K1 8 core RISC-V chip)
+
+Check your build with:
+```
+docker images
+```
+
 
 The "make -j3" uses 3 cores, so you should see 3 cores jump to 100%. More cores might lookup your system.
+
+# run
+
+```
+docker run sanderjo/sabnzbd-riscv64
+
+```
 
 ![image](https://github.com/user-attachments/assets/b48dc500-8772-42cf-a65b-2ca32f6c7ec2)
 
