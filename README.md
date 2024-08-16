@@ -4,7 +4,7 @@ SABnzbd for RISCV64 ... with RISCV Vector instructions (RVV) in both sabctools a
 
 Specials:
 * par2cmdline-turbo: updated config.guess, a certain commit that works (with altered makefile)
-* unrar: remove -mative
+* unrar: remove "-march=native" so that it compiles
 * sabnzbd: use python modules cryptography and cffi from alpine (not from pip, as that needs rust and a lot of compiling)
 
 # build
