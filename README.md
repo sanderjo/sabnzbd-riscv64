@@ -4,9 +4,11 @@ SABnzbd for RISCV64 ... with RISCV Vector instructions (RVV) in both sabctools a
 
 Specials:
 * alpine, as it provides gcc 14, which is needed to compile RVV
-* par2cmdline-turbo: updated config.guess, a certain commit that works (with altered makefile)
+* par2cmdline-turbo: updated config.guess
 * unrar: remove "-march=native" so that it compiles
 * sabnzbd: use python modules cryptography and cffi from alpine (not from pip, as that needs rust and a lot of compiling)
+
+Plain Ubuntu:24.10 is easier, but not compiled with gcc 14, so no RVV commands in sabctools and par2cmdline-turbo
 
 # Prepare
 
