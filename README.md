@@ -36,7 +36,7 @@ The "make -j3" uses 3 cores, so you should see 3 cores jump to 100%. More cores 
 # run
 
 ```
-docker run sanderjo/sabnzbd-riscv64
+docker run -p 8080:8080 sanderjo/sabnzbd-riscv64
 
 ```
 
@@ -44,7 +44,7 @@ docker run sanderjo/sabnzbd-riscv64
 
 # SABnzbd logging
 
-SABnzbd should show these lines at startup.
+SABnzbd should show these lines at startup: "SIMD set: RVV" and both par2 and unrar available:
 
 ```
 2024-08-16 20:42:16,038::INFO::[SABnzbd:425] SABCTools module (v8.2.5)... found!
@@ -55,7 +55,6 @@ SABnzbd should show these lines at startup.
 2024-08-16 20:42:16,044::INFO::[SABnzbd:460] UNRAR binary... found (/usr/bin/unrar)
 ```
 
-# run
 
 # rvv
 
