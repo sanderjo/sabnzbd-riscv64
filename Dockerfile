@@ -12,12 +12,10 @@ RUN \
 	cd /tmp && \
 	git clone https://github.com/animetosho/par2cmdline-turbo.git && \
 	cd par2cmdline-turbo/ && \
-	git reset --hard 8bd0a431e58716cf8456696867a59829aa72771b && \
 	cp /usr/share/autoconf/build-aux/config.guess . && \
 	cp /usr/share/autoconf/build-aux/config.sub . && \
 	./automake.sh && \
 	./configure && \
-	sed -i -e 's/c99/gnu99/g' Makefile && \
 	make -j3 && \
 	./par2 --version && \
 	objdump -d par2 | awk '{ print $3 }'  | sort | uniq -c | grep " v" && \
