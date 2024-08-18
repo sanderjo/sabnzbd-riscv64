@@ -31,7 +31,7 @@ docker images
 ```
 
 
-The "make -j3" uses 3 cores, so you should see 3 cores jump to 100%. More cores might lookup your system.
+The "make -j3" uses 3 cores, so you should see 3 cores jump to 100% (see screenshot). More cores might lock-up your system.
 
 # run
 
@@ -39,6 +39,11 @@ The "make -j3" uses 3 cores, so you should see 3 cores jump to 100%. More cores 
 docker run -p 8080:8080 sanderjo/sabnzbd-riscv64
 
 ```
+
+# CPU usage during compile
+
+3 cores in use. Picture from `s-tui`
+
 
 ![image](https://github.com/user-attachments/assets/b48dc500-8772-42cf-a65b-2ca32f6c7ec2)
 
