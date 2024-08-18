@@ -8,11 +8,32 @@ Specials:
 * unrar: remove "-march=native" so that it compiles
 * sabnzbd: use python modules cryptography and cffi from alpine (not from pip, as that needs rust and a lot of compiling)
 
-Plain Ubuntu:24.10 is easier, but not compiled with gcc 14, so no RVV commands in sabctools and par2cmdline-turbo
+Notes:
+* Plain Ubuntu:24.10 is easier, but not compiled with gcc 14, so no RVV commands in sabctools and par2cmdline-turbo
+* this docker image build does also work on x86 and ARM, but less necessary
 
 # Prepare
 
 Running on your RISCV64: Bianbu, with docker (docker.io) installed
+
+Check your docker setup is working:
+
+```
+docker run hello-world
+```
+If that fails because of permissions:
+
+```
+sudo docker run hello-world
+```
+
+Check your git setup is working:
+
+
+```
+git --version
+```
+
 
 # build
 
